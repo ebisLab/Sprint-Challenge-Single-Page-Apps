@@ -1,7 +1,12 @@
 import React from 'react'
 
-export default function LocationCard ({ name, type, dimension, residents }) {
+export default function LocationCard ({ lName, lType, lDimension }) {
   // image={image}
-  return (<span>todo: location</span>
+  return (
+  <section className="location-list grid-view">
+    <p>{lName}</p>
+    <p>{lType}</p>
+    <p>{lDimension}</p>
+  </section>
   )
 }
