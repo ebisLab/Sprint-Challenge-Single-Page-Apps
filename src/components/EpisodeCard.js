@@ -1,5 +1,13 @@
 import React from 'react'
 
-export default function EpisodeCards ({ /* add props */ }) {
-  return (<span>todo: location</span>
+export default function EpisodeCards ({ eName, eDate, episd }) {
+  return (
+    <section className="location-list grid-view">
+
+    <p>{eName}</p>
+    <p>{eDate}</p>
+    <p>{episd}</p>
+  </section>
+    )
 }
+
