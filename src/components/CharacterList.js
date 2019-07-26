@@ -29,19 +29,37 @@ export default function CharacterList(props) {
     getChars();
   }, [])
   // const {name, status}= chars;
+
   return (
   <section className='character-list grid-view'>
    { data.map(character =>{
-     return <CharacterCard cStatus={character.status} />
+     return (
+    //  <CharacterCard 
+    //  cImg={character.image}
+    //  cName={character.name}
+    //  cSpecies ={character.species}
+    //  cStatus={character.status} 
+    //  cLocation={character.location}
+    //  cType={character.type}
+    //  />
+    <CharacterCard 
+    cImg={character.image}
+     cName={character.name}
+     cSpecies ={character.species}
+     cStatus={character.status} 
+     cLocation={character.location.name}
+     cOrigin={character.origin.name}
+     />
+     )
     })}
      {/* <CharsDeets /> */}
-      <h2>TODO: `array.map()` over your state here!</h2>
+      {/* <h2>TODO: `array.map()` over your state here!</h2>
       <div>
      <div>Name: </div>
      <div>{props.name} </div>
      <div>Location: </div>
-     <div>Episodes: </div>
-   </div>
+     <div>Episodes: </div> */}
+   {/* </div> */}
     </section>)
 }
 
