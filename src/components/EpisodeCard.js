@@ -1,13 +1,21 @@
-import React from 'react'
+import React from 'react';
+import { Card, Divider, Container, Icon, Label, Segment } from 'semantic-ui-react';
+
 
 export default function EpisodeCards ({ eName, eDate, episd }) {
   return (
-    <section className="location-list grid-view">
+    <Card.Group>
+    <Card >
+  <Card.Content>
 
-    <p>{eName}</p>
-    <p>{eDate}</p>
-    <p>{episd}</p>
-  </section>
+
+    <Card.Header>{eName}</Card.Header>
+    <Card.Description><p>{eDate}</p>
+    <p>{episd}</p></Card.Description>
+  
+    </Card.Content>
+      </Card >
+      </Card.Group>
     )
 }
 

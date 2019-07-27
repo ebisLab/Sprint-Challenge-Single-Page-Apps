@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import { Divider } from 'semantic-ui-react';
+import { Divider, Container } from 'semantic-ui-react';
 import LocationCard from './LocationCard';
 
 
@@ -31,25 +31,20 @@ export default function LocationsList(props) {
   // const {name, status}= chars;
 
   return (
+    <Container className="container-cards">
   <section className='character-list grid-view'>
    { data.map(location =>{
      return (
-   
     <LocationCard 
     lName={location.name}
     lType={location.type}
-    lDimension
+    lDimension={location.dimension}
+    lResidents={location.residents}
      />
      )
     })}
-     {/* <CharsDeets /> */}
-      {/* <h2>TODO: `array.map()` over your state here!</h2>
-      <div>
-     <div>Name: </div>
-     <div>{props.name} </div>
-     <div>Location: </div>
-     <div>Episodes: </div> */}
-   {/* </div> */}
-    </section>)
+    
+    </section>
+    </Container>)
 }
 
